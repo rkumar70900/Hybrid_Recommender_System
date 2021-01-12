@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        tbody,
+        th,
+        td {
+            border: 3px solid black;
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        body {
+            background-image: url('recommendations.jpg');
+            background-color: #cccccc;
+            height: 745px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        div.c {
+            position: absolute;
+            right: 150px;
+            width: 200px;
+            height: 120px;
+        }
+
+        .a {
+            color: white;
+        }
+
+        .text-centre {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <h1 class='a'>Recommendations:</h1>
+        <h2 class='a'>Showing results for: {{ search_id }}</h2>
+        <div class='c'>
+            <table class="movie_table" align="center">
+                <tr>
+                    <th>Movie Title</th>
+                </tr>
+                <tbody class="table_body">
+                    <tr>
+                        <td>{{ movie_names[0] }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ movie_names[1] }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ movie_names[2] }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ movie_names[3] }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ movie_names[4] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</body>
+
+</html>
